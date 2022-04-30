@@ -49,3 +49,36 @@ def is_leap(year):
 year = int(raw_input())
 print is_leap(year)
         
+# Nested List
+
+if __name__ == '__main__':
+    size = int(raw_input())
+    names = []
+    scores = []
+    scoresOrg = []
+    for _ in range(size):
+        name = raw_input()
+        score = float(raw_input())
+        scores.append(score)
+        scoresOrg.append(score)
+        names.append(name)
+    scores.sort() 
+    secondMin = scores[1]
+    while scores[0] == scores[1]:
+        scores.pop(0)
+    secondMin = scores[1]
+    index = []
+    count = scores.count(secondMin)
+    while count >= 1:
+        index.append(scoresOrg.index(secondMin))
+        scores.remove(secondMin)
+        count = scores.count(secondMin)
+    namesToSort = []
+    while len(index) > 0:
+        namesToSort.append(names.pop(index[0]))
+        index.pop(0)
+    namesToSort.sort()
+    while len(namesToSort) > 0:
+        print(namesToSort[0])
+        namesToSort.pop(0)    
+    
