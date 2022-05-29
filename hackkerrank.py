@@ -98,3 +98,27 @@ if __name__ == '__main__':
     for x in range(len(currScore)):
         sumStud += currScore[x]
     print("{:.2f}".format(sumStud/len(currScore)))    
+    
+    
+    #LIST
+    
+    if __name__ == '__main__':
+    N = int(raw_input())
+    newList = []
+    for x in range(N):
+        command = str(raw_input())
+        inputList = command.split(" ")
+        if inputList[0] == "insert":
+            newList.insert(int(inputList[1]) ,int(inputList[2]))
+        elif inputList[0] == "print":
+            print(newList)
+        elif inputList[0] == "remove":
+            newList.remove(int(inputList[1]))
+        elif inputList[0] == "append":
+            newList.append(int(inputList[1]))
+        elif inputList[0] == "sort":
+            newList.sort()
+        elif inputList[0] == "pop":
+            newList.pop()
+        elif inputList[0] == "reverse":
+            newList.reverse()
