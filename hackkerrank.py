@@ -122,3 +122,11 @@ if __name__ == '__main__':
             newList.pop()
         elif inputList[0] == "reverse":
             newList.reverse()
+            
+            
+    #Tuple
+    if __name__ == '__main__':
+    n = int(raw_input())
+    integer_list = map(int, raw_input().split())
+    t = tuple(integer_list)
+    print(hash(t))
