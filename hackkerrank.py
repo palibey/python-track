@@ -178,3 +178,18 @@ if __name__ == '__main__':
     i, c = raw_input().split()
     s_new = mutate_string(s, int(i), c)
     print s_new
+    
+    #COUNT SUB
+    def count_substring(string, sub_string):
+    count = 0
+    for i in range(0, len(string) - len(sub_string) + 1):
+        if string[i] == sub_string[0]:
+            flag = True
+            for x in range(0, len(sub_string)):
+                if string[i + x] != sub_string[x]:
+                    flag = False
+            if flag:
+                count = count + 1
+    return count
+
+if __name__ == '__main__':
