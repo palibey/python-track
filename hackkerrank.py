@@ -193,3 +193,23 @@ if __name__ == '__main__':
     return count
 
 if __name__ == '__main__':
+
+    
+    
+    
+    #SETS
+    if __name__ == '__main__':
+    set1Length = raw_input()
+    line = raw_input()
+    line = line.split(" ")
+    set1 = set(line)
+    set2Length = raw_input()
+    line = raw_input()
+    line = line.split(" ")
+    set2 = set(line)
+    l1 =list(set1.difference(set2))
+    l2 =list(set2.difference(set1)) 
+    l2 = l1 + l2
+    l2.sort(key=int)
+    for x in l2:
+        print(x)
