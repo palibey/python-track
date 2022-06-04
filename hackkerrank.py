@@ -154,3 +154,27 @@ if __name__ == '__main__':
     line = raw_input()
     result = split_and_join(line)
     print result
+    
+    
+    #NAME
+    def print_full_name(first, last):
+    print("Hello " + first + " " + last + "! You just delved into python.")
+
+if __name__ == '__main__':
+    first_name = raw_input()
+    last_name = raw_input()
+    print_full_name(first_name, last_name)
+    
+    
+    #ADD CHAR
+    def mutate_string(string, position, character):
+    l = list(string)
+    l[position] = character
+    toReturn = ""
+    return toReturn.join(l)
+
+if __name__ == '__main__':
+    s = raw_input()
+    i, c = raw_input().split()
+    s_new = mutate_string(s, int(i), c)
+    print s_new
