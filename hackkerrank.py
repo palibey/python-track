@@ -141,3 +141,16 @@ if __name__ == '__main__':
     s = raw_input()
     result = swap_case(s)
     print result
+
+    
+    
+    
+    #SPLIT
+    def split_and_join(line):
+   spl = line.split(" ")
+   spl = "-".join(spl)
+   return spl
+if __name__ == '__main__':
+    line = raw_input()
+    result = split_and_join(line)
+    print result
