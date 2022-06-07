@@ -222,3 +222,23 @@ if __name__ == '__main__':
     for x in range(int (inputSize)):
         s.add(raw_input())
     print(len(s))
+    
+    
+    #SETREMOVE
+    n = input()
+s = set(map(int, raw_input().split()))
+inputSize = raw_input()
+for x in range(int(inputSize)):
+    command = raw_input().split(" ")
+    if(str(command[0]) == "remove" and int(command[1]) in s):
+        s.remove(int(command[1]))
+    elif(str(command[0]) == "discard"):
+        s.discard(int(command[1]))
+    elif (str(command[0]) == "pop" and len(s) > 0):
+            s.pop();            
+sum1 = 0
+for x in range(len(s)):
+    sum1 = int(s.pop()) + sum1
+print(sum1)
+    
+
