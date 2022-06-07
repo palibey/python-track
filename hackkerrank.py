@@ -213,3 +213,12 @@ if __name__ == '__main__':
     l2.sort(key=int)
     for x in l2:
         print(x)
+
+        
+    #SETADD
+    if __name__ == '__main__':
+    inputSize = raw_input()
+    s = set()
+    for x in range(int (inputSize)):
+        s.add(raw_input())
+    print(len(s))
